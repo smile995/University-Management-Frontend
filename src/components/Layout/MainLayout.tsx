@@ -6,6 +6,7 @@ import {
 const { Header, Content, Footer, Sider } = Layout;
 import { Layout, Menu } from "antd";
 import { createElement } from "react";
+import { Outlet } from "react-router";
 const items = [
   UserOutlined,
   VideoCameraOutlined,
@@ -18,7 +19,7 @@ const items = [
 }));
 const MainLayout = () => {
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
@@ -29,7 +30,19 @@ const MainLayout = () => {
           console.log(collapsed, type);
         }}
       >
-        <div className="demo-logo-vertical" />
+        <div
+          style={{
+            height: "50px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "20px",
+          }}
+        >
+          PH University
+        </div>
         <Menu
           theme="dark"
           mode="inline"
@@ -46,7 +59,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            content
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
