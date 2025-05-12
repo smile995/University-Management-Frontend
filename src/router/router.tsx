@@ -4,6 +4,7 @@ import Errorpage from "../pages/Common/Errorpage";
 import App from "../App";
 import Signin from "../pages/Common/Signin";
 import Register from "../pages/Common/Register";
+import { adminPaths } from "./admin.route";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,12 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <App />,
-    children: [
-      {
-        path: "home",
-        element: <p>kiso akta</p>,
-      },
-    ],
+    children: adminPaths,
   },
   {
     path: "/faculty",
