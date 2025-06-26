@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router";
-
 import Errorpage from "../pages/Common/Errorpage";
 import App from "../App";
 import Signin from "../pages/Common/Signin";
@@ -12,12 +11,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <Errorpage />,
-    children: [
-      {
-        path: "home",
-        element: <p>kiso akta</p>,
-      },
-    ],
   },
   {
     path: "/admin",
