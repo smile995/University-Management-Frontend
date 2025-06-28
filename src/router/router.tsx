@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Errorpage from "../pages/Common/Errorpage";
 import App from "../App";
-import Signin from "../pages/Common/Signin";
+import Signin from "../pages/Common/Login";
 import Register from "../pages/Common/Register";
 import { adminPaths } from "./admin.route";
 import { facultyPaths } from "./faculty.route";
